@@ -3,6 +3,7 @@ languageCode = 'en-gb'
 title = 'reality.foldLeft'
 theme = 'ananke'
 sectionPagesMenu = 'main'
+enableEmoji = true
 
 [[params.ananke_socials]]
 name = 'mastodon'
