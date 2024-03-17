@@ -1,0 +1,18 @@
+baseURL = 'https://dazfuller.uk/'
+languageCode = 'en-gb'
+title = 'reality.foldLeft'
+theme = 'ananke'
+sectionPagesMenu = 'main'
+
+[[params.ananke_socials]]
+name = 'mastodon'
+url = 'https://mstdn.social/@dazfuller'
+rel = 'me noopener'
+
+[[params.ananke_socials]]
+name = 'github'
+url = 'https://github.com/dazfuller'
+
+[[params.ananke_socials]]
+name = 'linkedin'
+url = 'https://www.linkedin.com/in/dazfuller'
