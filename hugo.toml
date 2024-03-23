@@ -4,6 +4,7 @@ title = 'reality.foldLeft'
 theme = 'ananke'
 sectionPagesMenu = 'main'
 enableEmoji = true
+enableRobotsTXT = true
 
 [[params.ananke_socials]]
 name = 'mastodon'
