@@ -39,7 +39,7 @@ In between all of this there were a number of reboots as well as things like SSI
 
 Before doing all of this I ran a few speed tests from the lounge, which is kind of close to the routers, but the house has some pretty dense walls and so connectivity isn't always great.
 
-On the old network (I've lost the saved imaged :angry:) I was getting between 80Mpbs and 120Mbps down, and about 40Mbps up. Which when I've got 600mbps broadband isn't great. And at one point I was getting around 30Mpbs down!
+On the old network (I've lost the saved images :angry:) I was getting between 80Mpbs and 120Mbps down, and about 40Mbps up. Which when I've got 600mbps broadband isn't great. And at one point I was getting around 30Mpbs down!
 
 With the new devices in place, it's now so much better (and this is why I ended up just moving everything) and I'm getting between 400Mpbs and 500Mpbs down to the device.
 
