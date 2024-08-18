@@ -2,7 +2,7 @@
 title = 'Velops Network and PiHole config'
 date = 2024-04-06T13:51:37+01:00
 tags = ['networking', 'pihole']
-featured_image = 'velops-network-banner.webp'
+featured_image = 'pihole-admin.png'
 +++
 ## Ol' Faithful
 

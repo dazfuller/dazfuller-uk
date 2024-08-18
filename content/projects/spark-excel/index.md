@@ -2,6 +2,7 @@
 title = 'Spark Excel'
 date = 2024-03-17T11:27:04Z
 tags = ['open source', 'spark', 'excel', 'scala']
+featured_image = 'notebook-example.png'
 +++
 Forever haunted by landing projects which seem to involve lots of Excel files, and wanting to learn more about Spark data sources at the time, I raised a cutlass and did battle with that most terrible of data exchange formats.
 

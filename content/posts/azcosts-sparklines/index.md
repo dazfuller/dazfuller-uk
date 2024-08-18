@@ -2,7 +2,7 @@
 title = 'Azure Costs CLI tool - Adding a Spark'
 date = 2024-05-30T10:07:48+01:00
 tags = ['open source', 'golang', 'azure']
-featured_image = 'azcosts-sparklines-banner.webp'
+featured_image = 'sparklines-code.png'
 +++
 I've had a few days off lately, so thought I'd spend some time adding some new features to the [Azure Costs](/projects/azcosts) CLI tool I've been writing and using.
 

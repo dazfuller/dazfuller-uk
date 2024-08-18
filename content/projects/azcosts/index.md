@@ -2,7 +2,7 @@
 title = 'Azure Costs CLI'
 date = 2024-03-17T15:11:21Z
 tags = ['open source', 'golang', 'azure']
-featured_image = 'azcosts-banner.webp'
+featured_image = 'azcosts-output.png'
 +++
 A command line utility for retrieving azure subscription costs and generating reports.
 
