@@ -148,13 +148,13 @@ for _, row := range primaryMatches.Rows() {
 
 The very first line is the part which executes our query. It takes the database we're executing against, the query itself, and then our parameters. The query returns a number of tables in the results, but it's the first table which contains our result set, so we get that first table.
 
-The for look then iterates over each row and uses the rows `ToStruct` method to read the row values into the struct we created earlier. Then finally we output the results.
+The for loop then iterates over each row and uses the rows `ToStruct` method to read the row values into the struct we created earlier. Then finally we output the results.
 
 A quick `go build` and we can test this out.
 
 ![Results from running the app](app-results.png "Results from running our application and querying for 'cities of east asia'")
 
-This all comes together really quickly and easily, and makes Fabric a service for hosting a vector database store which needs fast retrieval and cloud level scaling.
+This all comes together really quickly and easily, and makes Fabric a great service for hosting a vector database store which needs fast retrieval and cloud level scaling.
 
 ## Where's the SDK anger?
 
