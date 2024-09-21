@@ -18,3 +18,11 @@ url = 'https://github.com/dazfuller'
 [[params.ananke_socials]]
 name = 'linkedin'
 url = 'https://www.linkedin.com/in/dazfuller'
+
+[[params.ananke_socials]]
+name = 'rss'
+url = '/index.xml#feed'
+
+[[params.author]]
+  email = 'contact@dazfuller.uk'
+  name = 'Darren Fuller'
