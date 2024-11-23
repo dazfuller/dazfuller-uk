@@ -69,3 +69,5 @@ bower_components
 .awspublish*
 
 .idea/
+
+.env
