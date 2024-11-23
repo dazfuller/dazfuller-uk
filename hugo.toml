@@ -6,6 +6,9 @@ sectionPagesMenu = 'main'
 enableEmoji = true
 enableRobotsTXT = true
 
+[params]
+  favicon = 'favicon.ico'
+
 [params.ananke.social.mastodon]
 profilelink = 'https://mstdn.social/@dazfuller'
 
