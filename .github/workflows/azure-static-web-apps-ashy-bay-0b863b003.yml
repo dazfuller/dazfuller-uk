@@ -38,7 +38,7 @@ jobs:
           node-version: 22
       - name: Build And Deploy
         run: |
-          npm install @azure/static-web-apps-cli
+          npm install -g @azure/static-web-apps-cli
           rm -rf ./public
           hugo
           swa deploy -a ./ -O ./public --env preview -d ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ASHY_BAY_0B863B003 }}
