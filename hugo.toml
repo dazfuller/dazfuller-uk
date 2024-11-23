@@ -1,27 +1,25 @@
 baseURL = 'https://www.dazfuller.uk/'
 languageCode = 'en-gb'
 title = 'reality.foldLeft'
-theme = 'ananke'
+theme = ["github.com/theNewDynamic/gohugo-theme-ananke/v2"]
 sectionPagesMenu = 'main'
 enableEmoji = true
 enableRobotsTXT = true
 
-[[params.ananke_socials]]
-name = 'mastodon'
-url = 'https://mstdn.social/@dazfuller'
-rel = 'me noopener'
+[params.ananke.social.mastodon]
+profilelink = 'https://mstdn.social/@dazfuller'
 
-[[params.ananke_socials]]
-name = 'github'
-url = 'https://github.com/dazfuller'
+[params.ananke.social.bluesky]
+profilelink = 'https://bsky.app/profile/dazfuller.bsky.social'
 
-[[params.ananke_socials]]
-name = 'linkedin'
-url = 'https://www.linkedin.com/in/dazfuller'
+[params.ananke.social.linkedin]
+username = "dazfuller"
 
-[[params.ananke_socials]]
-name = 'rss'
-url = '/index.xml#feed'
+[params.ananke.social.github]
+username = 'dazfuller'
+
+[params.ananke.social.rss]
+profilelink = '/index.xml#feed'
 
 [[params.author]]
   email = 'contact@dazfuller.uk'

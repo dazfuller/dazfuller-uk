@@ -1,0 +1,18 @@
+[ananke.social.follow]
+new_window_icon = false
+networks = [
+  "mastodon",
+  "bluesky",
+  "github",
+  "linkedin",
+  "rss"
+]
+
+[ananke.social.share]
+icons = true
+sharetext = true
+networks = [
+  "email",
+  "bluesky",
+  "linkedin"
+]
