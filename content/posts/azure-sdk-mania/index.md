@@ -1,7 +1,6 @@
 +++
 title = 'Azure Sdk Mania'
 date = 2024-09-21T12:08:00+01:00
-draft = true
 tags = ['azure', 'sdk']
 featured_image = 'ackbar.jpg'
 +++
