@@ -8,7 +8,7 @@ build:
 
 deploy-test:
     rm -rf ./public
-    hugo --baseURL $SWA_PREVIEW_NAME
+    hugo -D --baseURL $SWA_PREVIEW_NAME
     swa deploy -a ./ -d $SWA_TOKEN -O ./public --env preview
 
 deploy-live:
