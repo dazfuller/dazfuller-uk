@@ -2,6 +2,7 @@
 title = 'Azure Functions - Timer Trigger with Go'
 date = 2024-11-30T12:52:17Z
 tags = ['azure', 'golang', 'energy']
+featured_image = 'sleeping-dogs.png'
 +++
 I've seen a couple of posts/videos lately where people have been saying that you can't do [timer triggers](https://learn.microsoft.com/azure/azure-functions/functions-bindings-timer) in Azure Functions using [Golang](https://go.dev) (or, any other language outside of C#, Python, Java, JS/TS). This mostly seems to be because the documentation doesn't list Go or other languages in it.
 
