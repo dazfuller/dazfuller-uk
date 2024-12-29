@@ -1,7 +1,6 @@
 +++
 title = 'Advent of Code 2024 - Day 11'
 date = 2024-12-28T10:56:55Z
-draft = true
 tags = ['golang', 'aoc']
 featured_image = 'snowy.png'
 +++
