@@ -6,13 +6,14 @@ run:
 build:
     hugo
 
-deploy-test:
+clean:
     rm -rf ./public
+
+deploy-test: clean
     hugo -D --baseURL $SWA_PREVIEW_NAME
     swa deploy -a ./ -d $SWA_TOKEN -O ./public --env preview
 
-deploy-live:
-    rm -rf ./public
+deploy-live: clean
     hugo --baseURL $SWA_LIVE_NAME
     swa deploy -a ./ -d $SWA_TOKEN -O ./public --env Production
 
