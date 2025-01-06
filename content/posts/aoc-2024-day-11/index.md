@@ -2,7 +2,7 @@
 title = 'Advent of Code 2024 - Day 11'
 date = 2024-12-28T10:56:55Z
 tags = ['golang', 'aoc']
-featured_image = 'snowy.png'
+featured_image = 'snowy.webp'
 +++
 I participated in [Advent of Code](https://adventofcode.com) again this year, but unlike previous years I actually put some time into it. Previous years I've started, gotten immediately distracted, and then stopped. This year I made it to day 20 before getting distracted.
 
