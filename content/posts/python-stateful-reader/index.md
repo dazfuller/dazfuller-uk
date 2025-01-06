@@ -311,6 +311,8 @@ sqlite> select * from state;
 
 If you try doing the same with another file then you'll get another record in the table.
 
+> One thing to note, if you run this a number of times you'll notice that the last 10 of the previous run and the first 10 of the next run are the same records. This is because we haven't added a checkpoint after the second set, so if you were going to use this you'd want to make sure you do that.
+
 ## Using it
 
 I plugged this into the process I was running and off I went again. This time when the process stopped (okay, I might have done it on purpose a couple of times to check this was working), I could resume the program and it would pick up from where it left off.
