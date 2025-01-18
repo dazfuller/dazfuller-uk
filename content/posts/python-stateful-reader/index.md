@@ -1,7 +1,7 @@
 +++
 title = 'Python Stateful Reader'
 date = 2025-01-05T12:08:44Z
-tags = ['python', 'large-files']
+tags = ['python', 'large-files', 'bulk-data']
 +++
 Recently I needed to read a very large file of input data and, for each record, perform an HTTP request to send that data off somewhere else.
 
