@@ -6,11 +6,11 @@ tags = ['open source', 'golang', 'dotnet']
 featured_image = 'example-prompt.webp'
 +++
 
-Bored of modifying source code files each time a change was needed to a prompt, the idea of DotPrompt landed. A way to hold the prompt information in an editable file which could be modified at runtime, which could also hold other information such as temperature and maximum tokens.
+Bored with modifying source code files each time a change was needed to a prompt, the idea of DotPrompt landed. A way to hold the prompt information in an editable file which could be modified at runtime, which could also hold other information such as temperature and maximum tokens.
 
-When I was creating it the idea seemed to have surfaced elsewhere as well, with initiatives from Google as part of GenKit, and from Microsoft in the form of Prompty.
+When I was creating it, the idea seemed to have surfaced elsewhere as well, with initiatives from Google as part of GenKit, and from Microsoft in the form of Prompty.
 
-So, why did I stick with my own? Well, for a few reasons, but chief amongst them being.
+So, why did I stick with my own? Well, for a few reasons, but chief amongst them being:
 
 1. It's intended to do one thing simply
 2. I wanted it to be extensible
@@ -22,9 +22,9 @@ As a spare time project I also implemented a version for Go, which is also avail
 
 ## :question: What is it?
 
-It's an open-source library which reads files with a `.prompt` extension and makes them available to the application for using in GenAI solution. It supports templating which allows the prompt file to specify parameters and the values are injected at runtime to create the final prompt.
+It's an open-source library that reads files with a `.prompt` extension and makes them available to the application for using in GenAI solution. It supports templating which allows the prompt file to specify parameters and the values are injected at runtime to create the final prompt.
 
-The prompt files themselves are just YAML, so they're easy to create and read. The other solutions have a variation which use YAML for the config, and then delimiters for the textual parts. I'm not a massive fan of this as YAML can handle text just fine, but it's on my roadmap to have the library be able to parse both formats.
+The prompt files themselves are just YAML, so they're easy to create and read. The other solutions have a variation that uses YAML for the config, and then delimiters for the textual parts. I'm not a massive fan of this as YAML can handle text just fine, but it's on my roadmap to have the library be able to parse both formats.
 
 So, you could have a template like this.
 
@@ -42,7 +42,7 @@ The parameters are available to both the system and user prompt, allowing both t
 
 ## What's a prompt file?
 
-In it's most simplistic form DotPrompt is a library which can read a prompt file, and then takes parameters to return the system and user prompts. The prompt file is core to all of this, so lets have a look at one.
+In its most simplistic form DotPrompt is a library that can read a prompt file and then takes parameters to return the system and user prompts. The prompt file is core to all of this, so let's have a look at one.
 
 ```yaml
 name: Example
@@ -73,17 +73,17 @@ fewShots:
     response: AI is used in virtual assistants like Siri and Alexa, which understand and respond to voice commands.
 ```
 
-At the top of the file we define a name for the prompt (though if we don't specify one then the library uses the file name). The names have to be unique in an application when using the manager, which we'll come to in a bit.
+At the top of the file we define a name for the prompt (though if we don't specify one, then the library uses the file name). The names have to be unique in an application when using the manager, which we'll come to in a bit.
 
-At the head of the file is the `config` section which defines the different options we want to send to the LLM and the parameters we want to use. You can see that the `style` parameter has a question mark after the name, this indicates that it's an option parameter. If the user doesn't specify it then the library doesn't mind and will either use no value, or a default if one is specified. If a parameters isn't optional, and no value is provided, and there's no default, then the library throws an exception at runtime.
+At the head of the file is the `config` section which defines the different options we want to send to the LLM and the parameters we want to use. You can see that the `style` parameter has a question mark after the name, this indicates that it's an option parameter. If the user doesn't specify it then the library doesn't mind and will either use no value, or a default if one is specified. If a parameter isn't optional, and no value is provided, and there's no default, then the library throws an exception at runtime.
 
 Following the config there's the `prompts` section which defines the system and user prompts. This is what I mean about YAML being able to handle text well. The text can be written in any of the following way.
 
 ```yaml
 text: The ships hung in the sky, in the same way that bricks don't
 
-# Produces
-# The ships hung in the sky, in the same way that bricks don't
+# Produces
+# The ships hung in the sky, in the same way that bricks don't
 ```
 
 ```yaml
@@ -91,9 +91,9 @@ text: |
   The ships hung in the sky,
   in the same way that bricks don't
 
-# Produces
+# Produces
 # The ships hung in the sky,
-# in the same way that bricks don't
+# in the same way that bricks don't
 ```
 
 ```yaml
@@ -101,8 +101,8 @@ text: >
   The ships hung in the sky,
   in the same way that bricks don't
 
-# Produces
-# The ships hung in the sky, in the same way that bricks don't
+# Produces
+# The ships hung in the sky, in the same way that bricks don't
 ```
 
 When using the `|` or `>` you can also add a `-` after them which trims additional line breaks, such as `|-`.
@@ -111,7 +111,7 @@ At the end of the prompt file we have a `fewShots` section where we can provide 
 
 ## What else can the library do.
 
-Well, as I mentioned before, there's the Manager feature, there's also interfaces which allow the library to be used in different ways.
+Well, as I mentioned before, there's the Manager feature there are also interfaces that allow the library to be used in different ways.
 
 ### Prompt Manager
 
@@ -135,7 +135,7 @@ var userPrompt = promptFile.GetUserPrompt(new Dictionary<string, object>
 });
 ```
 
-Or, in Go.
+Or, in Go after adding it using `go get github.com/dazfuller/dotprompt`.
 
 ```go
 promptManager, err := dotprompt.NewManager()
@@ -172,11 +172,11 @@ There's an example of using an Azure Storage Table in the [Github README](https:
 
 ## Testing?
 
-The library was written with testing in mind, so there's no internal default constructors or such craziness (looking at you here Microsoft), and it's interface driven, so you can mock out the bits you need to when running your own tests.
+The library was written with testing in mind, so there are no internal default constructors or such craziness (looking at you here Microsoft). It's also interface-driven, so you can mock out the bits you need to when running your own tests.
 
 ## What next?
 
-So in the roadmap are a few items which I'm hoping to start on soon. It's open-source as well, so if other people want to submit ideas then I'm open to them.
+So in the roadmap are a few items which I'm hoping to start on soon. It's open-source as well, so if other people want to submit ideas, then I'm open to them.
 
 * Add JSON schema support
 * Implement support for reading prompt files for GenKit and Prompty
