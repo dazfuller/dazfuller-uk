@@ -1,7 +1,6 @@
 +++
 title = 'DotPrompt'
 date = 2025-04-21T12:33:34+01:00
-draft = true
 tags = ['open source', 'golang', 'dotnet']
 featured_image = 'example-prompt.webp'
 +++
