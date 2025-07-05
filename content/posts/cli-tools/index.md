@@ -1,8 +1,8 @@
 +++
 title = 'Cli Tools'
 date = 2025-06-28T17:31:29+01:00
-draft = true
 tags = ['cli', 'tools']
+featured_image = 'btop-full.webp'
 +++
 I use a good number of CLI tools every day. I've always got a terminal open, and it's my go-to place when I need to do things.
 
