@@ -1,0 +1,21 @@
+{{ with .Params.series }}
+{{ $currentSeries := index . 0 }}
+{{ $seriesPages := where site.RegularPages "Params.series" "intersect" (slice $currentSeries) }}
+{{ $sorted := sort $seriesPages "Params.series_order" "asc" }}
+<aside class="series-block">
+    <h3>Series: {{ $currentSeries }} </h3>
+    {{ if gt (len $sorted) 1 }}
+    <ol>
+        {{ range $sorted }}
+        <li>
+            {{ if eq .Permalink $.Permalink }}
+            <strong>{{ .Title }}</strong>
+            {{ else }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ end }}
+        </li>
+        {{ end }}
+    </ol>
+    {{ end }}
+</aside>
+{{ end }}

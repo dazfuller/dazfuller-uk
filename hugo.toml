@@ -6,8 +6,14 @@ sectionPagesMenu = 'main'
 enableEmoji = true
 enableRobotsTXT = true
 
+[[menu.main]]
+  identifier = 'series'
+  name = 'Series'
+  url = '/series/'
+
 [params]
   favicon = 'favicon.ico'
+  show_reading_time = true
 
 [params.ananke.social.mastodon]
 profilelink = 'https://mstdn.social/@dazfuller'
@@ -27,3 +33,8 @@ profilelink = '/index.xml#feed'
 [[params.author]]
   email = 'contact@dazfuller.uk'
   name = 'Darren Fuller'
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
