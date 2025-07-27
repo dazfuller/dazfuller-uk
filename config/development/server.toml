@@ -1,0 +1,8 @@
+[[headers]]
+  for = '/**'
+  [headers.values]
+    Content-Security-Policy = "default-src http: https: data: 'unsafe-inline' 'unsafe-eval'"
+    X-Frame-Options = 'SAMEORIGIN'
+    X-Content-Type-Options = 'nosniff'
+    Referrer-Policy = 'no-referrer-when-downgrade'
+    Permissions-Policy = 'microphone=(), camera=(), geolocation=(), payment=(), fullscreen=(self)'

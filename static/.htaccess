@@ -1,0 +1,24 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Enable HSTS
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Set Content Security Policy
+Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
+
+# Prevent other sites from using in an iFrame
+Header always set X-Frame-Options "SAMEORIGIN"
+
+# Set the content type to 'nosniff'
+Header always set X-Content-Type-Options "nosniff"
+
+# Prevent referrer information from being provided when navigating from HTTPS to HTTP
+Header always set Referrer-Policy "no-referrer-when-downgrade"
+
+# Set the permissions policy
+Header set Permissions-Policy "microphone=(), camera=(), geolocation=(), payment=(), fullscreen=(self)"
