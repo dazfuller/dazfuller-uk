@@ -71,3 +71,5 @@ bower_components
 .idea/
 
 .env
+
+site_backup/
