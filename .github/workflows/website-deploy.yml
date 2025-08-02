@@ -33,11 +33,11 @@ jobs:
           extended: true
       - name: Install lftp
         run: |
-          sudo apt install lftp
+          sudo apt install -y lftp
       - name: Build
         run: |
           rm -rf ./public
           hugo
       - name: Deploy
         run: |
-          lftp -c "open sftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }}; mirror --reverse --parallel=10 public /"
+          lftp -c "set ssl:verify-certificate false; open sftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }}; mirror --reverse --parallel=10 public /"
