@@ -31,17 +31,13 @@ jobs:
         with:
           hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
+      - name: Install lftp
+        run: |
+          sudo apt install lftp
       - name: Build
         run: |
           rm -rf ./public
           hugo
       - name: Deploy
-        uses: pontago/lftp-deploy-action@v1.0.1
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          protocol: sftp
-          local_dir: ./public
-          remote_dir: /
-          dry_run: true
+        run: |
+          lftp -c "open sftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }}; mirror --reverse --parallel=10 public /"
