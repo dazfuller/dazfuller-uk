@@ -38,9 +38,9 @@ jobs:
       - name: Deploy
         uses: pontago/lftp-deploy-action@v1.0.1
         with:
-          host: ${{ FTP_HOST }}
-          username: ${{ FTP_USER }}
-          password: ${{ FTP_PASS }}
+          host: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
           protocol: sftp
           local_dir: ./public
           remote_dir: /
