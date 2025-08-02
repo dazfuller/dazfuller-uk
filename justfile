@@ -12,15 +12,13 @@ build:
 clean:
     rm -rf ./public
 
-[doc("Deploy the website to the test instance")]
-deploy-test: clean
-    hugo -D --baseURL $SWA_PREVIEW_NAME
-    swa deploy -a ./ -d $SWA_TOKEN -O ./public --env preview
+[doc("Deploy to SFTP location")]
+deploy: clean build
+    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --reverse --parallel=10 public public_html"
 
-[doc("Deploy the website to the live instance")]
-deploy-live: clean
-    hugo --baseURL $SWA_LIVE_NAME
-    swa deploy -a ./ -d $SWA_TOKEN -O ./public --env Production
+[doc("Create a backup of the current site")]
+backup:
+    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --delete --parallel=10 public_html site_backup"
 
 [doc("Update robots.txt to disallow AI crawlers")]
 update-robots:
