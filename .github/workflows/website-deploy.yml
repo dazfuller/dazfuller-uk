@@ -40,4 +40,4 @@ jobs:
           hugo
       - name: Deploy
         run: |
-          lftp -c "set sftp:auto-confirm true; set ssl:verify-certificate false; open sftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }}; mirror --reverse --parallel=10 public /"
+          lftp -c "set sftp:auto-confirm true; set ssl:verify-certificate false; open sftp://${{ secrets.FTP_USER }}:${{ secrets.FTP_PASS }}@${{ secrets.FTP_HOST }}; mirror --reverse --parallel=10 -v public /"
