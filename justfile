@@ -14,11 +14,11 @@ clean:
 
 [doc("Deploy to SFTP location")]
 deploy: clean build
-    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --reverse --parallel=10 public public_html"
+    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --reverse --parallel=10 -v public public_html"
 
 [doc("Create a backup of the current site")]
 backup:
-    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --delete --parallel=10 public_html site_backup"
+    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --delete --parallel=10 -v public_html site_backup"
 
 [doc("Update robots.txt to disallow AI crawlers")]
 update-robots:
