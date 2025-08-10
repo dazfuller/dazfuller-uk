@@ -1,5 +1,5 @@
 +++
-title = 'Creating the resources'
+title = 'Go Function App: Creating the resources'
 date = 2025-08-09T16:27:32+01:00
 tags = ['Golang', 'Azure', 'HCL', 'Bicep']
 series = ['Building and Deploying a Go Function App']
@@ -10,7 +10,7 @@ I've done a couple of posts before on running [Go](https://go.dev) in [Azure Fun
 
 The thing which always felt missing to me is that I've never pulled together different aspects of the process, from setting up the environment, building the code, deploying, and monitoring. So that's what I'm hoping to achieve with this series.
 
-In this first part we're going to start by building out the target environment. We'll be doing this through Infrastructure-as-Code using [HCL](https://github.com/hashicorp/hcl) (the Hashicorp Scripting Language), though I'll be using [OpenTofu](https://opentofu.org) for running commands. Though there will be a [bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) version as well, and I'll explain the differences between them where they exist.
+In this first part we're going to start by building out the target environment. We'll be doing this through Infrastructure-as-Code using [HCL](https://github.com/hashicorp/hcl) (the Hashicorp Configuration Language), though I'll be using [OpenTofu](https://opentofu.org) for running commands. Though there will be a [bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview) version as well, and I'll explain the differences between them where they exist.
 
 So, lets dive in.
 
@@ -672,6 +672,8 @@ Okay, now for the SQL database. This is a little more complex.
 
 **Important**. I would not normally recommend this process. I'm doing this for a demo only and to make the deployment a little (hopefully) easier. I would always recommend using a data deployment tool such as [sqlpackage](https://learn.microsoft.com/sql/tools/sqlpackage/sqlpackage-download) rather than using Infrastructure as Code scripts.
 
+> If you do add scripts to your IaC code then make sure that they are script files and not in-line. Script files can be tested in isolation and are easier to maintain. Doing it in-line, you lose features like syntax highlighting and auto-completion, and testing becomes much more difficult.
+
 With that said...
 
 We have two scripts which are in the `scripts` directory, one is for creating the single table we need, and the other is a shell script for adding our function app identity, and then running the SQL script.
@@ -719,7 +721,7 @@ Do _not_ forget to make the script executable on Mac and Linux, which you can do
 
 The SQL script is hopefully easy enough to follow, though you might not have seen the [Vector](https://learn.microsoft.com/sql/t-sql/data-types/vector-data-type). We're creating a new column with a vector type, which is a 1536-dimensional vector. This is the vector that we'll be using to store the embeddings for each article.
 
-In the shell script we're using the [sqlcmd](https://learn.microsoft.com/sql/tools/sqlcmd/sqlcmd-utility) utility to create a new user, add it to the db_datareader and db_datawriter roles, and then run the SQL script. To connect, we're using the `-G` flag which says we're using the already authenticated user. This works because above we added the current user as the administrator of the SQL server.
+In the shell script we're using the [sqlcmd](https://learn.microsoft.com/sql/tools/sqlcmd/sqlcmd-utility) utility to create a new user, add it to the db_datareader and db_datawriter roles, and then run the SQL script. To connect, we're using the `-G` flag which says we're using the already authenticated user. This works because above we added the current user as the administrator of the SQL server. The first three commands use the `-Q` flag which executes a single query and then exits.
 
 In the shell script we are using variables for the SQL server, database, and the name of the function app. To get those values and pass them in, we're going to use the [terraform_data](https://developer.hashicorp.com/terraform/language/resources/terraform-data) resource type.
 
