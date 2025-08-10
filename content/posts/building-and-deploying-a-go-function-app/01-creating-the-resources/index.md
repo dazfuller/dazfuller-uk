@@ -14,6 +14,8 @@ In this first part we're going to start by building out the target environment. 
 
 So, lets dive in.
 
+> If you want to just go look at the code then you can find it over on [Codeberg](https://codeberg.org/dazfuller/go-func-sql/src/branch/main/infrastucture)
+
 ## What are we building?
 
 We're going to build a simple application that will have the following features.
