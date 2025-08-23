@@ -1,7 +1,7 @@
 [[headers]]
   for = '/**'
   [headers.values]
-    Content-Security-Policy = "default-src http: https: data: 'unsafe-inline' 'unsafe-eval'"
+    Content-Security-Policy = "default-src http: https: data: 'unsafe-inline' 'unsafe-eval'; connect-src 'self'"
     X-Frame-Options = 'SAMEORIGIN'
     X-Content-Type-Options = 'nosniff'
     Referrer-Policy = 'no-referrer-when-downgrade'

@@ -9,7 +9,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
 # Set Content Security Policy
-Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'"
+Header always set Content-Security-Policy "default-src https: data: 'unsafe-inline' 'unsafe-eval'; connect-src 'self'"
 
 # Prevent other sites from using in an iFrame
 Header always set X-Frame-Options "SAMEORIGIN"
