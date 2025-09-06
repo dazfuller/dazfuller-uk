@@ -1,7 +1,6 @@
 +++
 title = 'snub'
 date = 2025-09-06T13:30:33+01:00
-draft = true
 tags = ['open source', 'golang', 'cli', 'git']
 featured_image = 'cover.webp'
 +++
