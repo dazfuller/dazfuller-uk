@@ -1,7 +1,6 @@
 +++
 title = 'API Gripe'
 date = 2025-10-05T15:06:38+01:00
-draft = true
 tags = ['api', 'rant']
 +++
 I promised myself I wouldn't post too often with rants about random stuff I come across, and I like to think I've done okay so far (even though some companies _cough_ Microsoft _cough_ give me ample opportunity).
