@@ -20,6 +20,11 @@ deploy: clean build
 backup:
     lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --delete --parallel=10 -v public_html site_backup"
 
+[doc("Download log files")]
+logs:
+    lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --parallel=10 -v www_logs logs"
+    zcat -f logs/dazfuller.uk/access.log* | goaccess --log-format=COMBINED -o logs/report.html --agent-list --real-os
+
 [doc("Update robots.txt to disallow AI crawlers")]
 update-robots:
     rm ./layouts/robots.txt
