@@ -1,7 +1,6 @@
 +++
 title = 'November 2025 Update'
 date = 2025-11-22T13:14:30Z
-draft = true
 tags = ['life']
 featured_image = '01000047.webp'
 +++
