@@ -25,6 +25,10 @@ logs:
     lftp -c "open sftp://$FTP_USER:$FTP_PASS@$FTP_HOST; mirror --parallel=10 -v www_logs logs"
     zcat -f logs/dazfuller.uk/access.log* | goaccess --log-format=COMBINED -o logs/report.html --agent-list --real-os
 
+[doc("Generate log report for last 7 days")]
+logs-weekly:
+    zcat -f logs/dazfuller.uk/access.log* | goaccess --log-format=COMBINED -o logs/report.html --agent-list --real-os --keep-last=7
+
 [doc("Update robots.txt to disallow AI crawlers")]
 update-robots:
     rm ./layouts/robots.txt
