@@ -22,6 +22,12 @@ Disallow: /
 User-agent: Amazonbot
 Disallow: /
 
+# AI Agent
+# https://knownagents.com/agents/amazonbuyforme
+
+User-agent: AmazonBuyForMe
+Disallow: /
+
 # AI Search Crawler
 # https://knownagents.com/agents/anomura
 
@@ -86,6 +92,12 @@ Disallow: /
 # https://knownagents.com/agents/chatglm-spider
 
 User-agent: ChatGLM-Spider
+Disallow: /
+
+# AI Agent
+# https://knownagents.com/agents/chatgpt-agent
+
+User-agent: ChatGPT Agent
 Disallow: /
 
 # AI Assistant
@@ -214,6 +226,12 @@ Disallow: /
 User-agent: Google-NotebookLM
 Disallow: /
 
+# AI Agent
+# https://knownagents.com/agents/googleagent-mariner
+
+User-agent: GoogleAgent-Mariner
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/googleother
 
@@ -292,6 +310,12 @@ Disallow: /
 User-agent: LinkupBot
 Disallow: /
 
+# AI Agent
+# https://knownagents.com/agents/manus-user
+
+User-agent: Manus-User
+Disallow: /
+
 # AI Data Scraper
 # https://knownagents.com/agents/meta-externalagent
 
@@ -320,6 +344,12 @@ Disallow: /
 # https://knownagents.com/agents/netestate-imprint-crawler
 
 User-agent: netEstate Imprint Crawler
+Disallow: /
+
+# AI Agent
+# https://knownagents.com/agents/novaact
+
+User-agent: NovaAct
 Disallow: /
 
 # AI Search Crawler
@@ -398,6 +428,12 @@ Disallow: /
 # https://knownagents.com/agents/timpibot
 
 User-agent: Timpibot
+Disallow: /
+
+# AI Agent
+# https://knownagents.com/agents/twinagent
+
+User-agent: TwinAgent
 Disallow: /
 
 # AI Data Scraper
