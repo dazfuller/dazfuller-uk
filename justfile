@@ -36,5 +36,5 @@ update-robots:
     curl -X POST https://api.darkvisitors.com/robots-txts \
         -H "Authorization: Bearer ${DV_API_KEY}" \
         -H "Content-Type: application/json" \
-        -d '{ "disallow": "/", "agent_types": [ "AI Data Scraper", "AI Assistant", "AI Search Crawler", "Undocumented AI Agent" ] }' \
+        -d '{ "disallow": "/", "agent_types": [ "AI Data Scraper", "AI Assistant", "AI Agent", "AI Search Crawler", "Undocumented AI Agent" ] }' \
         > ./layouts/robots.txt
